@@ -2,7 +2,7 @@
 This repository contains an implementation of a Genetic model that tries to optimize the structure of a Convolution Neural Network (CNN).  
 
 ### Requirements
-only `tensorflow` in needed. See [requirements.txt](requirements.txt) and use `pip install -r requirements.txt` for installation.
+only `tensorflow` is needed. See [requirements.txt](requirements.txt) and use `pip install -r requirements.txt` for installation.
 <br><br>
 
 ## About Genetic-algorithm
@@ -12,24 +12,26 @@ In computer science and operations research, a genetic algorithm (GA) is a metah
 </p>
 
 
+
 ## Project structure
+- ### 📄 file [main.ipynb]
+  This  file is my Demo file that shows how to use this classifier on `cifar10` dataset (provided by `keras.datasets`).
+  
 - ### 📂 directory [genetic_cnn_optimizer]
     - #### 📄 file [cnn_chromo.py]
-      This file contains `CNNChromo` class. This is the representation of a CNN in genetic. Each chromosome consist of an array:
-        <p align='center'>
-          <img height="300" alt="chromo" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/tree/main/README.imgs/chromo.png">
-        </p>
-      I have implemented two Crossover operations, the first one is a pivot based crossover and the other uses a random binary list for dividing genomes.
+      This file contains `CNNChromo` class. This is the representation of a CNN in genetic. Each chromosome consists of an array:
       <p align='center'>
-          <img height="300" alt="crossover" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/tree/main/README.imgs/crossover.png">
+          <img height="200" alt="genetic-example" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/blob/main/README.imgs/chromo.png">
       </p>
-      The mutation operation will change one genome randomly. There are three conditions that may happen in mutation. (a) change one genome $L_{i}$ or $K_{i}$ &nbsp; &nbsp; (b) increase number of layers &nbsp; &nbsp; (c) decrease number of layers 
+      I have implemented two Crossover operations, the first one is a pivot-based crossover and the other uses a random binary list for dividing genomes.
       <p align='center'>
-          <img height="300" alt="mutate" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/tree/main/README.imgs/mutate.png">
+          <img height="200" alt="genetic-example" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/blob/main/README.imgs/crossover.png">
+      </p>
+      The mutation operation will change one genome randomly. There are three conditions that may happen in mutation. <b>(a)</b>change one genome $L_{i}$ or  $K_{i}$ &nbsp; <b>(b)</b>increase the number of layers &nbsp; <b>(c)</b>decrease the number of layers 
+      <p align='center'>
+          <img height="130" alt="genetic-example" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/blob/main/README.imgs/mutate.png">
       </p>
 
     - #### 📄 file [genetic_cnn.py]
       This file contains `GeneticCNN_finder` class. This is where Genetic Algorithm is implemented. The constructor of this class takes a parameter `accuracy_function` that should be a function for evaluating the accuracy of every CNN created by the genetic. 
 
-- ### 📄 file [main.ipynb]
-  These file is my Demo file that show how to make in-use this classifier on `cifar10` dataset (provided by `keras.datasets`).
