@@ -17,15 +17,15 @@ In computer science and operations research, a genetic algorithm (GA) is a metah
     - #### 📄 file [cnn_chromo.py]
       This file contains `CNNChromo` class. This is the representation of a CNN in genetic. Each chromosome consist of an array:
         <p align='center'>
-          <img height="300" alt="genetic-example" src="README.imgs/chromo.png">
+          <img height="300" alt="chromo" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/tree/main/README.imgs/chromo.png">
         </p>
       I have implemented two Crossover operations, the first one is a pivot based crossover and the other uses a random binary list for dividing genomes.
       <p align='center'>
-          <img height="300" alt="genetic-example" src="README.imgs/crossover.png">
+          <img height="300" alt="crossover" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/tree/main/README.imgs/crossover.png">
       </p>
-      The mutation operation will change one genome randomly. There are three conditions that may happen in mutation. (a) change one genome $L_{i}$ or ............... $K_{i}$ (b) increase number of layers (c) decrease number of layers 
+      The mutation operation will change one genome randomly. There are three conditions that may happen in mutation. (a) change one genome $L_{i}$ or $K_{i}$ &nbsp; &nbsp; (b) increase number of layers &nbsp; &nbsp; (c) decrease number of layers 
       <p align='center'>
-          <img height="300" alt="genetic-example" src="README.imgs/mutate.png">
+          <img height="300" alt="mutate" src="https://github.com/mohammadAbbasniya/Genetic_CNN_optimizer/tree/main/README.imgs/mutate.png">
       </p>
 
     - #### 📄 file [genetic_cnn.py]
